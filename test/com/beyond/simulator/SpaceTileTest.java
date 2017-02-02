@@ -10,7 +10,7 @@ import static org.junit.Assert.*;
 public class SpaceTileTest {
 
     @Test
-    public void Constructor1_Trues_Test(){
+    public void constructor1_Trues_Test(){
         SpaceTile target = new SpaceTile(true, true, true, 4);
         assertTrue(target.hasPlanet());
         assertTrue(target.hasStation());
@@ -23,7 +23,7 @@ public class SpaceTileTest {
     }
 
     @Test
-    public void Constructor1_Falses_Test(){
+    public void constructor1_Falses_Test(){
         SpaceTile target = new SpaceTile(false, false, false, 6);
         assertFalse(target.hasPlanet());
         assertFalse(target.hasStation());
@@ -36,7 +36,7 @@ public class SpaceTileTest {
     }
 
     @Test
-    public void Constructor2_Trues_Test(){
+    public void constructor2_Trues_Test(){
         SpaceTile target = new SpaceTile(true, true, true, 4, 7);
         assertTrue(target.hasPlanet());
         assertTrue(target.hasStation());
@@ -49,7 +49,7 @@ public class SpaceTileTest {
     }
 
     @Test
-    public void Constructor2_Falses_Test(){
+    public void constructor2_Falses_Test(){
         SpaceTile target = new SpaceTile(false, false, false, 6, 8);
         assertFalse(target.hasPlanet());
         assertFalse(target.hasStation());
@@ -62,14 +62,14 @@ public class SpaceTileTest {
     }
 
     @Test
-    public void Constructor3_Start_Test(){
+    public void constructor3_Start_Test(){
         SpaceTile target = new SpaceTile(true);
         assertTrue(target.isStart());
         assertFalse(target.isStop());
     }
 
     @Test
-    public void Constructor3_Stop_Test(){
+    public void constructor3_Stop_Test(){
         SpaceTile target = new SpaceTile(false);
         assertFalse(target.isStart());
         assertTrue(target.isStop());
