@@ -7,6 +7,8 @@ public class Simulator {
 
     private Board _board;
 
+    private SpaceTileCollection _spaceTiles;
+
     private List<SpaceTile> _spaceTileDrawPile = new ArrayList<>();
 
     private List<Encounter> _encounterDrawPile = new ArrayList<>();
@@ -17,10 +19,6 @@ public class Simulator {
 
     private void setUpGame() {
         _board = new Board();
-        createSpaceTiles();
-    }
-
-    private void createSpaceTiles() {
-
+        _spaceTiles = new SpaceTileCollection();
     }
 }
