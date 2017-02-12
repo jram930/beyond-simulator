@@ -1,18 +1,22 @@
 package com.beyond.simulator;
 
 import java.util.ArrayList;
+import java.util.Date;
 import java.util.List;
+import java.util.Random;
 
 /**
  * Created by Jared on 2/1/2017.
  */
 public class SpaceTileCollection {
 
-    List<SpaceTile> _drawPile = new ArrayList<>();
+    private List<SpaceTile> _drawPile = new ArrayList<>();
 
-    SpaceTile _startTile;
+    private SpaceTile _startTile;
 
-    SpaceTile _stopTile;
+    private SpaceTile _stopTile;
+
+    private static Random _random = new Random(new Date().getTime());
 
     public SpaceTileCollection() {
         generatePlanetOnlyTiles();
@@ -95,5 +99,9 @@ public class SpaceTileCollection {
 
     public List<SpaceTile> getDrawPile() {
         return _drawPile;
+    }
+
+    public SpaceTile drawTile() {
+        return _drawPile.remove(_random.nextInt(_drawPile.size()));
     }
 }

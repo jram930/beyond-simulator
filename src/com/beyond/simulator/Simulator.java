@@ -9,16 +9,29 @@ public class Simulator {
 
     private SpaceTileCollection _spaceTiles;
 
-    private List<SpaceTile> _spaceTileDrawPile = new ArrayList<>();
-
-    private List<Encounter> _encounterDrawPile = new ArrayList<>();
+    private EncounterCardCollection _encounterCards;
 
     public void runSimulation() {
         setUpGame();
     }
 
     private void setUpGame() {
+        try {
+            Thread.sleep(1000);
+        } catch(Exception e) {}
+
         _board = new Board();
+
+        try {
+            Thread.sleep(1000);
+        } catch(Exception e) {}
+
         _spaceTiles = new SpaceTileCollection();
+
+        try {
+            Thread.sleep(1000);
+        } catch(Exception e) {}
+
+        _encounterCards = new EncounterCardCollection();
     }
 }
